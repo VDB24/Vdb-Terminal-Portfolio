@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Portfolio | terminal Welcome to my portfolio! — Type help for a list of supported commands." />
+  <meta name="keywords"
+    content="vashisht, VDB24, portfolio, HTML, CSS, terminal terminal-portfolio" />
+  <meta name="author" content="Vashisht Brahmbhatt" />
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+  <!-- Preconnect and Preload -->
+  <link rel="preconnect" href="https://kit.fontawesome.com" crossorigin />
+  <link rel="preload" href="assets/cat.webp" as="image" type="image/webp" />
+  <link rel="preload" href="assets/beautifullanimestreetscenerycherryblossom.webp" as="image" type="image/webp" />
+  <!-- Google Fonts: JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link href="styles.css" rel="stylesheet" />
+
+  <!-- FontAwesome -->
+  <script src="https://kit.fontawesome.com/39565093f3.js" crossorigin="anonymous" defer></script>
+
+  <style>
+    section h1 {
+      font-size: 2rem;
+    }
+  </style>
+
+  <!-- JS: Window Close Helper -->
+  <script>
+    function close_window() {
+      if (confirm("Close Window?")) {
+        window.location.href = "about:blank";
+      }
+    }
+  </script>
+
+  <title>Vashisht Brahmbhatt | Portfolio</title>
+</head>
+
+<body>
+  <div class="terminal-window" role="main">
+    <header role="banner" aria-label="Site Header">
+      <a href="https://github.com/VDB24" target="_blank" aria-label="GitHub Profile">
+        <i class="fa-brands fa-github header-icon github-icon" aria-hidden="true"></i>
+      </a>
+
+      <div class="centered" aria-hidden="true">
+        <span>VDB@archGX24</span>
+      </div>
+
+      <a href="#" onclick="close_window(); return false;" aria-label="Close Window">
+        <i class="fa-solid fa-circle-xmark header-icon close-icon" aria-hidden="true"></i>
+      </a>
+    </header>
+
+    <hr aria-hidden="true" />
+
+    <div id="contentscroll">
+      <div class="content-container">
+        <div class="hero-section" role="presentation" aria-hidden="true">
+          <div class="hero-content glass-panel">
+            <h1 class="hero-title">Vashisht Brahmbhatt</h1>
+            <div class="typing-container">
+              <span class="typing-text" id="typewriter"></span><span class="typing-cursor">█</span>
+            </div>
+          </div>
+        </div>
+
+        <section class="profile-info glass-panel" aria-labelledby="profile-heading">
+          <h1 id="profile-heading" class="sr-only">Profile Information</h1>
+
+          <div class="info-item">
+            <div class="name">
+              <i class="fa-solid fa-address-card" aria-hidden="true"></i>
+              <span>Vashisht Brahmbhatt</span>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <i class="fa-solid fa-building" aria-hidden="true"></i>
+            <span>Building</span>
+            <a href="https://colrnx-demo.vercel.app" class="link-text" target="_blank" aria-label="Colrnx">→ &nbsp;Colrnx</a>
+          </div>
+
+          <div class="info-item">
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+            <span>GitHub</span>
+            <a href="https://github.com/VDB24" class="link-text" target="_blank" aria-label="GitHub VDB24">→
+              &nbsp;github/VDB24</a>
+          </div>
+
+          <div class="info-item">
+            <i class="fa-brands fa-twitter" aria-hidden="true"></i>
+            <span>Twitter</span>
+            <a href="https://x.com/vashishtdbhere" class="link-text" target="_blank"
+              aria-label="Twitter vashishtdbhere">→ &nbsp;x/vashishtdbhere</a>
+          </div>
+
+          <div class="info-item">
+            <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+            <span>LinkedIn</span>
+            <a href="https://www.linkedin.com/in/vashishtdb24/" class="link-text" target="_blank"
+              aria-label="LinkedIn vashishtdb24">→ &nbsp;linkedin/vashishtdb24</a>
+          </div>
+
+          <div class="info-item">
+            <i class="fa-solid fa-file-invoice" aria-hidden="true"></i>
+            <span>Resume</span>
+            <a href="assets/Vashisht_D._Brahmbhatt.pdf" class="link-text" target="_blank"
+              aria-label="Download my resume">→ &nbsp;View Resume</a>
+          </div>
+        </section>
+      </div>
+
+      <section id="terminal" aria-label="Terminal Emulator">
+        <a id="before"></a>
+
+        <div id="command" onclick="document.getElementById('texter').focus();">
+          <label for="texter" class="sr-only">Command Input</label>
+          <input type="text" id="texter" class="texter" aria-label="Command line input" onkeyup="typeIt(this, event)"
+            onkeydown="typeIt(this, event); moveIt(this.value.length, event)" onkeypress="typeIt(this, event);" />
+          <div id="liner" data-prompt="[VDB@archGX24 ~]~$">
+            <span id="typer" aria-live="polite"></span><b class="cursor" id="cursor" aria-hidden="true">█</b>
+            <div class="list" aria-hidden="true"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="bottom-bar" role="contentinfo">
+      <div class="license-info"></div>
+      <div class="spotify-panel" style="padding: 0; background: transparent; border: none; box-shadow: none;">
+        <iframe width="320" height="150" scrolling="no" frameBorder="no" allow="autoplay"
+          src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/sc-playlists-vn/sets/lo-fi-chill-beats&color=%23e58461&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false"
+          style="border-radius: 12px; border: 1px solid var(--color-glass-border); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.05);">
+        </iframe>
+      </div>
+    </footer>
+    <!-- JS Files at end for non-blocking load -->
+    <script src="js/caret.js" defer></script>
+    <script src="js/commands.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <!-- SoundCloud Player API for Volume Control -->
+    <script src="https://w.soundcloud.com/player/api.js" defer></script>
+    <script>
+      window.addEventListener("load", function () {
+        const iframe = document.querySelector(".spotify-panel iframe");
+        if (iframe) {
+          const widget = SC.Widget(iframe);
+          widget.bind(SC.Widget.Events.READY, function () {
+            widget.setVolume(25); // Lower default volume to 50%
+          });
+        }
+      });
+    </script>
+  </div>
+</body>
+
+</html>
