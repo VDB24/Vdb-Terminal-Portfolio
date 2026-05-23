@@ -468,3 +468,123 @@ a {
   animation: blinker 1s linear infinite;
   margin-left: 5px;
 }
+
+/* ── Mobile Responsive ── */
+
+@media (max-width: 640px) {
+  html {
+    font-size: 82%;
+  }
+
+  .terminal-window {
+    min-height: 100dvh;
+    max-height: none;
+    border-radius: 0;
+    border: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #contentscroll {
+    flex: 1;
+    min-height: 0;
+  }
+
+  body {
+    background-attachment: fixed;
+  }
+
+  .content-container {
+    padding: 0.5rem 0.75rem 0 0.75rem;
+  }
+
+  .hero-content {
+    min-width: 0;
+  }
+
+  .hero-title {
+    font-size: var(--step-1);
+  }
+
+  .profile-info {
+    max-width: 100%;
+  }
+
+  #terminal {
+    height: 42vh;
+    padding-left: 0.75rem;
+  }
+
+  #terminal .glass-panel {
+    padding: 0.75rem;
+    font-size: var(--step--1);
+  }
+
+  #terminal .glass-panel h3 {
+    font-size: var(--step-0);
+    margin: 0.3rem 0;
+  }
+
+  header {
+    padding: 6px 6px 0 6px;
+    font-size: var(--step--1);
+  }
+
+  .header-icon {
+    font-size: 1.05rem;
+  }
+
+  .glass-panel {
+    padding: 0.75rem;
+  }
+
+  .bottom-bar {
+    position: static;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .bottom-bar .spotify-panel {
+    margin: 0;
+  }
+
+  .spotify-panel iframe {
+    max-width: 100%;
+    width: 100%;
+    height: 120px;
+  }
+
+  .info-item {
+    flex-wrap: wrap;
+    gap: 0.2rem;
+  }
+
+  .link-text {
+    padding-left: 0;
+  }
+
+  .ascii {
+    font-size: var(--step-0);
+    padding-left: 0;
+  }
+
+  .name::after {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 75%;
+  }
+
+  #terminal {
+    height: 38vh;
+  }
+
+  .spotify-panel iframe {
+    height: 100px;
+  }
+}
